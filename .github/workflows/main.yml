@@ -18,5 +18,5 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         
     - name: copy to S3
-      run: aws s3 sync index.html s3://chandan-demo-bucket
+      run: aws s3 sync . s3://chandan-demo-bucket --exclude '.git*/*'
         
