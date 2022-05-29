@@ -13,7 +13,7 @@ jobs:
     - name: Instal dependencies  
       run: npm install
     - name: Set AWS credentials
-      uses: aws-actions/configure-aws-credentials@main
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
       env:
